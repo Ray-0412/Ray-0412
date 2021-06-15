@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sensor">
+
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:text="儲存"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="土壤濕度"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sensor_place"
+        app:layout_constraintStart_toStartOf="@+id/sensor_place"
+        app:layout_constraintTop_toBottomOf="@+id/sensor_place"
+        app:layout_constraintVertical_bias="0.25" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="氣溫"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:inputType="number"
+        android:text="濕度"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/sw_min_value"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+
+    <EditText
+        android:id="@+id/at_min_value"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="15"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/sw_min_value"
+        app:layout_constraintStart_toStartOf="@+id/sw_min_value"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/aw_min_value"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/at_min_value"
+        app:layout_constraintStart_toStartOf="@+id/at_min_value"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/sensor_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="數值調整"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:id="@+id/sw_max_value"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:inputType="numberDecimal"
+        android:text="100"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sw_min_value"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/sw_min_value"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/at_max_value"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/sw_max_value"
+        app:layout_constraintStart_toStartOf="@+id/sw_max_value"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/aw_max_value"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="100"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_min_value"
+        app:layout_constraintEnd_toEndOf="@+id/at_max_value"
+        app:layout_constraintStart_toStartOf="@+id/at_max_value"
+        app:layout_constraintTop_toTopOf="@+id/aw_min_value" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="~"
+        app:layout_constraintBottom_toBottomOf="@+id/sw_min_value"
+        app:layout_constraintStart_toEndOf="@+id/sw_min_value"
+        app:layout_constraintTop_toTopOf="@+id/sw_min_value"
+        app:layout_constraintVertical_bias="0.344" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~"
+        app:layout_constraintBottom_toBottomOf="@+id/at_min_value"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/at_min_value" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_min_value"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/aw_min_value" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sw_max_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sw_max_value"
+        app:layout_constraintTop_toTopOf="@+id/sw_max_value" />
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="℃"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/at_max_value"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/at_max_value" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_max_value"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/aw_max_value" />
+</androidx.constraintlayout.widget.ConstraintLayout>
